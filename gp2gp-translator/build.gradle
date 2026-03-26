@@ -1,9 +1,9 @@
-bootJar {
-    archiveFileName = 'gp2gp-translator.jar'
+apply plugin: 'application'
+
+application {
+    mainClass = 'com.example.translator.TranslatorApplication'
 }
 
-// NOTE: No workingDir set here — this is intentional to replicate the bug
-task run(type: JavaExec, dependsOn: bootJar) {
-    classpath = files("build/libs/gp2gp-translator.jar")
-    mainClass = '-jar'
+bootJar {
+    archiveFileName = 'gp2gp-translator.jar'
 }
