@@ -1,9 +1,9 @@
-bootJar {
-    archiveFileName = 'gpc-api-facade.jar'
+apply plugin: 'application'
+
+application {
+    mainClass = 'com.example.facade.FacadeApplication'
 }
 
-// NOTE: No workingDir set here — this is intentional to replicate the bug
-task run(type: JavaExec, dependsOn: bootJar) {
-    classpath = files("build/libs/gpc-api-facade.jar")
-    mainClass = '-jar'
+bootJar {
+    archiveFileName = 'gpc-api-facade.jar'
 }
