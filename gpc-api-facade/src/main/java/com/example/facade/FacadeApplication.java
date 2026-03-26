@@ -21,6 +21,6 @@ public class FacadeApplication {
     // Logs a message every 10 seconds so you can easily see if logs are being written
     @Scheduled(fixedRate = 10000)
     public void heartbeat() {
-        logger.info("[FACADE] Heartbeat - service is running. Working dir: {}", System.getProperty("user.dir"));
+        logger.info("[FACADE] v2 - Heartbeat - service is running. Working dir: {}", System.getProperty("user.dir"));
     }
 }
