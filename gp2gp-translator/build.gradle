@@ -1,0 +1,9 @@
+bootJar {
+    archiveFileName = 'gp2gp-translator.jar'
+}
+
+// NOTE: No workingDir set here — this is intentional to replicate the bug
+task run(type: JavaExec, dependsOn: bootJar) {
+    classpath = files("build/libs/gp2gp-translator.jar")
+    mainClass = '-jar'
+}
